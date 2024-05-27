@@ -1,0 +1,36 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+#confirmation-message {
+    color: #4CAF50;
+}
+
+#reservation-number {
+    font-weight: bold;
+}
+body{
+    background-color: whitesmoke;
+}
+.container{
+    background-color: goldenrod;
+    border: 1px gold solid;
+    box-shadow: 4px 4px 4px black;
+}
+h1,p{
+    color: white;
+}

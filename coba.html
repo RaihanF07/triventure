@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .card {
+            width: 300px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            overflow: hidden;
+            margin: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 16px;
+        }
+
+        .card-content h2 {
+            margin-top: 0;
+        }
+
+        .card-content p {
+            margin-bottom: 8px;
+        }
+
+        .card-content .rating {
+            display: flex;
+            align-items: center;
+        }
+
+        .rating span {
+            color: #FFD700;
+            margin-right: 4px;
+        }
+
+        .card-content .price {
+            font-weight: bold;
+            font-size: 18px;
+            color: #333;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="card">
+        <img src="gambar.jpg" alt="Produk">
+        <div class="card-content">
+            <h2>Nama Produk</h2>
+            <p>Kode Produk: ABC123</p>
+            <div class="rating">
+                <span>&#9733;</span>
+                <span>&#9733;</span>
+                <span>&#9733;</span>
+                <span>&#9733;</span>
+                <span>&#9734;</span>
+            </div>
+            <p class="price">$50.00</p>
+        </div>
+    </div>
+
+</body>
+
+</html>

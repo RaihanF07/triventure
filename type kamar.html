@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  .kartu-container {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .kartu {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  .card {
+    position: relative;
+    width: 25.875em;
+    height: 18.5em;
+    box-shadow: 0px 1px 13px rgba(0,0,0,0.1);
+    cursor: pointer;
+    transition: all 120ms;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f3cb51;
+    padding: 0.5em;
+    padding-bottom: 3.4em;
+    margin-right: 30px; /* Mengganti margin-left menjadi margin-right */
+  }
+
+  .card::after {
+    content: "Add to Cart";
+    padding-top: 1.25em;
+    padding-left: 1.25em;
+    position: absolute;
+    left: 0;
+    bottom: -60px;
+    background: black;
+    border-radius: 5px;
+    color: #fff;
+    height: 2.5em;
+    width: 96%;
+    transition: all 80ms;
+    font-weight: 600;
+    text-transform: uppercase;
+    opacity: 0;
+  }
+
+  .card .title {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.9em;
+    position: absolute;
+    left: 0.625em;
+    bottom: 1.875em;
+    font-weight: 400;
+    color: #000;
+  }
+
+  .card .price {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 0.9em;
+    position: absolute;
+    left: 0.625em;
+    bottom: 0.625em;
+    color: #000;
+  }
+
+  .card:hover::after {
+    bottom: 0;
+    opacity: 1;
+  }
+
+  .card:active {
+    transform: scale(0.98);
+  }
+
+  .card:active::after {
+    content: "Added !";
+    height: 3.125em;
+  }
+
+  .text {
+    max-width: 55px;
+  }
+
+  .image {
+    background: rgb(241, 241, 241);
+    width: 420px;
+    height: 300px;
+    display: grid;
+    place-items: center;
+    overflow: hidden; 
+  }
+
+  .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+.slide-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.062); /* Warna latar belakang dengan transparansi */
+  color: #030303;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  z-index: 1;
+  transition: background-color 0.3s ease; /* Efek transisi warna latar belakang */
+}
+  .slide-button.left {
+    left: 0;
+  }
+
+  .slide-button.right {
+    right: 0;
+  }
+</style>
+<body>
+  <div class="kartu-container">
+    <div class="kartu">
+      <div class="card">
+        <div class="image"><img src="img/Double Economy Room.jpeg" alt=""></div>
+        <span class="title">Economy Room</span>
+        <span class="price"> Rp 280.000 /malam</span>
+      </div>
+      <div class="card">
+        <div class="image"><img src="img/single room.jpeg" alt=""></div>
+        <span class="title">Single Room</span>
+        <span class="price">Rp 420.000 /malam</span>
+      </div>
+      <div class="card">
+        <div class="image"><img src="img/double bedroom.jpeg" alt=""></div>
+        <span class="title">Double Bedroom</span>
+        <span class="price">Rp 560.000 /malam</span>
+      </div>
+      <div class="card">
+        <div class="image"><img src="img/family.jpeg" alt=""></div>
+        <span class="title">Family Room</span>
+        <span class="price">Rp 1.680.000 /malam</span>
+      </div>
+      <div class="card">
+        <div class="image"><img src="img/suite.jpeg" alt=""></div>
+        <span class="title">Suite Room</span>
+        <span class="price">Rp 2.100.000 /malam</span>
+      </div>
+    </div>
+
+    <button class="slide-button left" onclick="scrollCards(-1)">&#9665;</button>
+    <button class="slide-button right" onclick="scrollCards(1)">&#9655;</button>
+  </div>
+
+  <script>
+    let currentIndex = 0;
+
+    function scrollCards(direction) {
+      const kartu = document.querySelector('.kartu');
+      const cardWidth = document.querySelector('.card').offsetWidth;
+      const maxIndex = Math.floor(kartu.scrollWidth / cardWidth) - 1;
+
+      currentIndex = Math.max(0, Math.min(currentIndex + direction, maxIndex));
+
+      kartu.style.transform = `translateX(${-currentIndex * cardWidth}px)`;
+    }
+  </script>
+  
+</body>
+</html>
+<!-- <div class="col">
+                <div class="card">
+                    <img src="img/suite.jpeg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Presidential Suite</h5>
+                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
+                            additional content. This content is a little bit longer.</p>
+                        <button type="button" class="btn btn-secondary" data-bs-toggle="offcanvas"
+                            data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">booking</button>
+                        <span class="price"> Rp 3.500.000 /malam</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <img src="img/single room.jpeg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Ambassador Suite</h5>
+                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
+                            additional content.</p>
+                        <button type="button" class="btn btn-secondary" data-bs-toggle="offcanvas"
+                            data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">booking</button>
+                        <span class="price"> Rp 1.900.000 /malam</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <img src="img/penthouse.jpeg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Royal Suite</h5>
+                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
+                            additional content. This content is a little bit longer.</p>
+                        <button type="button" class="btn btn-secondary" data-bs-toggle="offcanvas"
+                            data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">booking</button>
+                        <span class="price"> Rp 12.000.000 /malam</span>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+      </div>
+      <!-- <div class="br"></div>
+      <h6>Type Deluxe</h6>
+      <div class="kartu">
+          <div class="row row-cols-1 row-cols-md-2 g-4" id="kartu">
+              <div class="col">
+                  <div class="card">
+                      <img src="img/a.jpg" class="card-img-top" alt="...">
+                      <div class="card-body">
+                          <h5 class="card-title">Executive Deluxe Room</h5>
+                          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
+                              additional content. This content is a little bit longer.</p>
+                          <button type="button" class="btn btn-secondary" data-bs-toggle="offcanvas"
+                              data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">booking</button>
+                          <span class="price"> Rp 1.200.000 /malam</span>
+                      </div>
+                  </div>
+              </div>
+              <div class="col">
+                  <div class="card">
+                      <img src="img/b.jpg" class="card-img-top" alt="...">
+                      <div class="card-body">
+                          <h5 class="card-title">Premier Deluxe Room</h5>
+                          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
+                              additional content. This content is a little bit longer.</p>
+                          <button type="button" class="btn btn-secondary" data-bs-toggle="offcanvas"
+                              data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">booking</button>
+                          <span class="price"> Rp 1.500.000 /malam</span>
+                      </div>
+                  </div>
+              </div>
+              <div class="col">
+                  <div class="card">
+                      <img src="img/c.jpg" class="card-img-top" alt="...">
+                      <div class="card-body">
+                          <h5 class="card-title">Grand Deluxe Room</h5>
+                          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
+                              additional content.</p>
+                          <button type="button" class="btn btn-secondary" data-bs-toggle="offcanvas"
+                              data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">booking</button>
+                          <span class="price"> Rp 1.800.000 /malam</span>
+                      </div>
+                  </div>
+              </div>
+              <div class="col">
+                  <div class="card">
+                      <img src="img/d.jpg" class="card-img-top" alt="...">
+                      <div class="card-body">
+                          <h5 class="card-title">Luxury Deluxe Room</h5>
+                          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
+                              additional content. This content is a little bit longer.</p>
+                          <button type="button" class="btn btn-secondary" data-bs-toggle="offcanvas"
+                              data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">booking</button>
+                          <span class="price"> Rp 1.600.000 /malam</span>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="br"></div>
+      <h6>Type Standard</h6>
+      <div class="kartu">
+          <div class="row row-cols-1 row-cols-md-2 g-4" id="kartu">
+              <div class="col">
+                  <div class="card">
+                      <img src="img/e.jpg" class="card-img-top" alt="...">
+                      <div class="card-body">
+                          <h5 class="card-title">Classic Room</h5>
+                          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
+                              additional content. This content is a little bit longer.</p>
+                          <button type="button" class="btn btn-secondary" data-bs-toggle="offcanvas"
+                              data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">booking</button>
+                          <span class="price"> Rp 900.000 /malam</span>
+                      </div>
+                  </div>
+              </div>
+              <div class="col">
+                  <div class="card">
+                      <img src="img/f.jpg" class="card-img-top" alt="...">
+                      <div class="card-body">
+                          <h5 class="card-title">Superior Room</h5>
+                          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
+                              additional content. This content is a little bit longer.</p>
+                          <button type="button" class="btn btn-secondary" data-bs-toggle="offcanvas"
+                              data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">booking</button>
+                          <span class="price"> Rp 700.000 /malam</span>
+                      </div>
+                  </div>
+              </div>
+              <div class="col">
+                  <div class="card">
+                      <img src="img/g.jpg" class="card-img-top" alt="...">
+                      <div class="card-body">
+                          <h5 class="card-title">Classic Room</h5>
+                          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
+                              additional content.</p>
+                          <button type="button" class="btn btn-secondary" data-bs-toggle="offcanvas"
+                              data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">booking</button>
+                          <span class="price"> Rp 950.000 /malam</span>
+                      </div>
+                  </div>
+              </div>
+              <div class="col">
+                  <div class="card">
+                      <img src="img/h.jpg" class="card-img-top" alt="...">
+                      <div class="card-body">
+                          <h5 class="card-title">Standard Room</h5>
+                          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
+                              additional content. This content is a little bit longer.</p>
+                          <button type="button" class="btn btn-secondary" data-bs-toggle="offcanvas"
+                              data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">booking</button>
+                          <span class="price"> Rp 800.000 /malam</span>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div> -->

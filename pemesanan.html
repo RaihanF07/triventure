@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="style2.css">
+    <script src="https://unpkg.com/feather-icons"></script>
+    <title>Pemesanan</title>
+</head>
+
+<body>
+    <nav>
+        <img src="img/logo.png" alt="Logo">
+        <ul>
+            <li><a href="index.html" class="menu">Home</a></li>
+            <li><a href="profile.html" class="menu">About</a></li>
+        </ul>
+    </nav>
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="img/Deluxe.jpeg" class="gambar 1">
+            </div>
+            <div class="carousel-item">
+                <img src="img/suite.jpeg" class="gambar 2">
+            </div>
+            <div class="carousel-item">
+                <img src="img/single room.jpeg" class="gambar 3">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    <div class="area">
+        <div class="kartu" >
+            <!-- <h6>Type Suite</h6> -->
+            <div id="test" class="row row-cols-1 row-cols-md-2 g-4"></div>
+            <!-- <h6>Type Deluxe</h6> -->
+            <div id="deluxe" class="row row-cols-1 row-cols-md-2 g-4"></div>
+            <!-- <h6>Type Standard</h6> -->
+            <div id="Standard" class="row row-cols-1 row-cols-md-2 g-4"></div>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section about">
+                <h2>About Us</h2>
+                <p>Triventure Hotel is a luxury hotel located in the heart of the city. We provide unmatched
+                    accommodation, friendly service, and top-notch facilities.</p>
+            </div>
+
+            <div class="footer-section contact">
+                <h2>Contact Us</h2>
+                <p>Email: info@triventurehotel.com</p>
+                <p>Phone: 0875366389</p>
+            </div>
+
+            <div class="footer-section links">
+                <h2>Quick Links</h2>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#">Rooms</a></li>
+                    <li><a href="#">Facilities</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section social">
+                <h2>Follow Us</h2>
+                <p>Stay connected with us on social media for updates and promotions.</p>
+                <a href="#" target="_blank"><img src="img/fb.png" alt="Facebook"></a>
+                <a href="#" target="_blank"><img src="img/ig (1).png" alt="Instagram"></a>
+                <a href="#" target="_blank"><img src="img/tw.png" alt="Twitter"></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Triventure Hotel | Semarang</p>
+        </div>
+    </footer>
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header">
+            <h4 id="offcanvasRightLabel" class="form">Form Booking</h4>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <form action="" method="post">
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Name</label>
+                    <input type="username" class="form-control">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Address</label>
+                    <input type="username" class="form-control">
+                </div>
+                <address class="mamat">
+                    <div class="col-md-6">
+                        <label for="inputCity" class="form-label">City</label>
+                        <input type="text" class="form-control" id="inputCity">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="inputCity" class="form-label">State</label>
+                        <input type="text" class="form-control" id="inputCity">
+                    </div>
+                </address>
+                <br>
+                <div class="col-md-2">
+                    <label for="inputZip" class="form-label">Zip</label>
+                    <input type="text" class="form-control" id="inputZip">
+                </div>
+                <br>
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Phone</label>
+                    <input type="username" class="form-control">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Email Address</label>
+                    <input type="username" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                </div>
+                <div class="gg">
+                    <label for="checkin_date">Check-In Date</label>
+                    <input type="date" id="checkin_date" name="checkin_date" required>
+                    <label for="checkout_date">Check-Out Date</label>
+                    <input type="date" id="checkout_date" name="checkout_date" required>
+                    <br>
+                    <label for="room_type">Room Type:</label>
+                    <select id="room_type" name="room_type" onchange="updateGuestCount()">
+                        <option value="single">Type Suit</option>
+                        <option value="double">Type Deluxe</option>
+                        <option value="suite">Type Standard</option>
+                    </select>
+                    <button type="button" class="btn btn-primary" id="bosterakhir"
+                        onclick="submitForm()">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="script3.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

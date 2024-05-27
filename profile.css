@@ -1,0 +1,270 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+header {
+    background-image: url('img/bg.png'); 
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+    height: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 5%; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+}
+
+.navbar .navbar-logo {
+    font-size: 2rem;
+    font-weight: 700;
+    color: black;
+    font-style: italic;
+}
+.navbar img{
+ height: 70px;
+}
+.navbar .navbar-nav {
+  display: flex;
+}
+.navbar .navbar-nav a {
+  color: white;
+  padding: 15px;
+  display: inline-block;
+  font-size: 1.3rem;
+  margin: 0 1rem;
+  text-decoration: none;
+}
+.navbar .navbar-extra {
+  display: flex;
+}
+.navbar .navbar-extra a {
+  color: black;
+  margin: 0 0.5rem;
+}
+#hamburger-menu {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+h1 {
+  font-size: 90px;
+  font-family: 'Montserrat', sans-serif;
+}
+.container {
+  display: flex;
+  height: 100vh;
+}
+.image-with-text {
+  display: flex;
+  align-items: center;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  width: 98%;
+}  
+.image-with-text img {
+  width: 700px; 
+  height: 850px; 
+  margin-right: 30px; 
+}
+.h1 {
+  font-size: 35px;
+  color: black;
+}
+.book {
+  display: flex;
+  align-items: center;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  width: 98%;
+  text-align: center; 
+}
+.book img {
+  width: 700px; 
+  height: 850px; 
+  margin-right: 30px; 
+}
+button {
+  margin-top: 20px;
+  font-size: 17px;
+  padding: 0.5em 2em;
+  border: transparent;
+  box-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+  background: gold;
+  color: white;
+  border-radius: 4px;
+  height: 50px;
+ }
+ 
+ button:hover {
+  background: rgb(2,0,36);
+  background: linear-gradient(90deg, rgb(255, 195, 30) 0%, rgb(202, 172, 38) 100%);
+ }
+ 
+ button:active {
+  transform: translate(0em, 0.2em);
+ }
+.button a {
+  text-decoration: none;
+  color: #fff;
+}
+span {
+  font-size: 20px;
+}
+.section {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70%;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  transition: flex .4s ease;
+  position: relative;
+}  
+.section .overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transition: background-color .8s ease;
+}  
+.section .content {
+  z-index: 2;
+}  
+.section:hover {
+  flex: 2;
+}  
+.section:hover .overlay {
+  background-color: rgba(56, 54, 54, 0.295);
+}  
+#marketing {
+  background-image: url('img/kantin.png');
+}   
+#technology {
+  background-image: url('img/kolam\ \(1\).png');
+}  
+#advertising {
+  background-image: url('img/spa.png');
+}
+.deks-fasility {
+  text-align: center;
+  font-family: 'Courier New', Courier, monospace;
+}
+.box-container {
+  display: flex;
+  justify-content: center;
+}
+.box img {
+  width: 40px;
+  height: 40px;
+  padding-left: 20px;
+  padding-top: 10px; 
+  margin-left: 5px;
+}
+.box span {
+  font-size: 28px;
+}
+.box {
+  padding: 50px;
+  width: 350px;
+  height: 100px;
+  margin: 10px;
+}
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+  margin-top: 150px;
+  margin-bottom: -20px;
+  padding: 0;
+  box-sizing: border-box;
+}  
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}  
+.footer-section {
+  flex: 1;
+  margin: 0 20px;
+}  
+.footer-section h2 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}  
+.footer-section p {
+  color: #f1f1f1;
+  line-height: 1.5;
+}  
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}  
+.footer-section ul li {
+  margin-bottom: 8px;
+}  
+.footer-section a {
+  color: #fff;
+  text-decoration: none;
+}  
+.footer-section a:hover {
+  text-decoration: underline;
+}  
+.footer-section img {
+  width: 30px;
+  margin-right: 10px;
+}  
+.footer-bottom {
+  text-align: center;
+  padding-top: 10px;
+  border-top: 1px solid #555;
+  margin-top: 20px;
+}
+.footer-bottom p {
+  color: white;
+}
+@media only screen and (max-width: 768px) {
+  .navbar .navbar-nav {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 65px; 
+    left: 0;
+    right: 0;
+    background-color: rgb(1, 1, 1, 0.8);
+  }
+  .navbar .navbar-nav.show {
+    display: flex;
+  }
+  .navbar .navbar-nav a {
+    margin: 0.5rem;
+  }
+  #hamburger-menu {
+    display: block;
+  }
+  .content-container {
+    flex-direction: column;
+  }
+  .product-info, .signup-form {
+    width: 100%;
+  }
+  .footer-section img {
+    width: 25px;
+    margin-right: 10px;
+  }
+}
