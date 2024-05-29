@@ -238,7 +238,7 @@ footer {
     margin-bottom: 100px;
 }
 
-@media(max-width:410px){
+@media(max-width:430px){
     nav{
         height: 100%;
         width: 100%;
