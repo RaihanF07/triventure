@@ -458,6 +458,9 @@ footer {
     display: flex;
     justify-content: right;
   }
+  nav li a:hover{
+    color: #fa9a00;
+  }
   nav .menu{
     font-size: 0.8em;
     width: 50%;

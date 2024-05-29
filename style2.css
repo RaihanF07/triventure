@@ -237,3 +237,57 @@ footer {
     box-shadow: #333;
     margin-bottom: 100px;
 }
+
+@media(max-width:410px){
+    nav{
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    nav .list{
+        display: flex;
+        flex-direction: column;
+        margin-left: auto;
+    }
+    .list a{
+        border: 1px solid #fa9a00;
+        display: flex;
+        justify-content: center;
+        font-size: 0.6em;
+        font-weight: bold;
+    }
+    .list a:hover{
+        color: #fa9a00;
+    }
+    .gambar{
+        height: 280px;
+    }
+    .card-body h5,p,.price{
+        font-size: 1em;
+        margin: 0;
+    }
+    body{
+        height: 100%;
+    }
+    .card-img-top{
+        height: 70%;
+    }
+    footer{
+        font-size: 0.7em;
+    }
+    .footer-bottom{
+        padding: 0;
+        overflow: hidden;
+    }
+    footer{
+        padding: 0;
+    }
+    .footer-bottom p{
+        margin: 1px auto;
+    }
+    
+
+
+}
